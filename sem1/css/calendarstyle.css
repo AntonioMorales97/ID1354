@@ -1,0 +1,78 @@
+.calendar{
+    width: 100%;
+    padding-top: 1.2em;
+    padding-bottom: 1em;
+}
+
+.calendar .week{
+    -ms-box-orient: horizontal;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: stretch;
+    padding-right: 0.5em;
+}
+.calendar .week .week-text {
+    width: 7em;
+    color: black;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: left; 
+    padding-left: 0.6em;
+    margin-right: 1em;
+}
+  
+.calendar .week .day {
+    width: 10em;
+    height: 10em;
+    -webkit-flex: 0 1 auto;
+    -moz-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding-top: 2px;
+    border: 1px solid black;
+    text-align: center;
+    background: rgba(221, 222, 222, 0.7);
+    overflow: hidden;
+}
+  
+.calendar .week .day p {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic; 
+}
+  
+.calendar .week .weekend {
+    background: rgb(255, 105, 85); 
+}
+  
+  
+.calendar .week .next-month {
+    opacity: 0.4; 
+}
+
+.calendar .week .day:hover{
+    background:rgb(253, 52, 1);
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+.calendar .week .day a .img-responsive {
+    width: 100%;
+}
+
+.calendar .week .day a img:hover {
+    opacity: 0.8; 
+}
