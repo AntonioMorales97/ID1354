@@ -7,7 +7,7 @@
         <title>Glazed Meatballs</title>
         <preptime>10 min</preptime>
         <cooktime>20 min</cooktime>
-        <imagepath>resources/images/meatballs.jpg</imagepath>
+        <imagepath>images/meatballs.jpg</imagepath>
         <quantity>4 servings</quantity>
         <category>Classic</category>
         <rating>3</rating>
@@ -35,7 +35,7 @@
         <quantity>20 filled pancakes</quantity>
         <category>Classic</category>
         <rating>5</rating>
-        <imagepath>resources/images/pancakes.jpeg</imagepath>
+        <imagepath>images/pancakes.jpeg</imagepath>
         <ingredient>
             <li>2 eggs</li>
             <li>2 cups whole milk</li>
