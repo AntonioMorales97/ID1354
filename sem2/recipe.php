@@ -1,6 +1,6 @@
 <?php
     include 'fragments/header.php';
-    $currentRecipe = "";
+
     if(isset($_GET['name'])){
         $xml = simplexml_load_file("recipes/recipes.xml") or die("Error: Could not create xml object");
         foreach($xml->recipe as $recipe){
@@ -8,6 +8,10 @@
                 $currentRecipe = $recipe;
                 break;
             }
+        }
+        if(!isset($currentRecipe)){
+            header("Location: index.php?error=norecipefound");
+            exit();
         }
     } else{
         header("Location: index.php?error=norecipefound");

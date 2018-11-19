@@ -54,6 +54,6 @@
     </div>
 </div>
 <?php
-    include_once 'fragments/footer.php';
+    include 'fragments/footer.php';
 ?>
 
