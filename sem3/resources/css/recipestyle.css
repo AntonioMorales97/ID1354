@@ -1,0 +1,268 @@
+/* Recipe Section */
+.main-recipe-container{
+    grid-area: mainrecipe;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.other-recipe{
+    grid-area: otherrecipe;
+}
+
+.other-recipe h2{
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+.other-recipe img{
+    box-shadow: var(--shadow);
+}
+
+.main-container{
+    display:grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        'mainrecipe'
+        'otherrecipe';
+}
+
+/* In main recipe */
+.main-recipe-header{
+    grid-area: mainrecipeheader;
+}
+
+.main-recipe-header h2{
+    font-size: 3rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-recipe-header .amount ul{
+    padding-top: 5px;
+    text-align: center;
+}
+
+.main-recipe-header .amount li{
+    display: inline;
+    font-size: 1.1rem;
+}
+
+.main-recipe-header .amount li:last-child{
+    padding-left: 10px;
+}
+
+.ingredients{
+    grid-area: ingredients;
+}
+
+.ingredients h3{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.ingredients-body{
+    font-size: 1.3rem;
+}
+
+.ingredients-body ul{
+    list-style-type: disc;
+    column-count: 1;
+    margin-left: 25px; 
+}
+
+.ingredients-body li:nth-child(odd){
+    background-color: rgb(196, 196, 196);
+}
+
+.ingredients-body li{
+    margin: 3px 0;
+}
+
+.directions{
+    grid-area: directions;
+    padding-right: 5px;
+}
+
+.directions h3{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.directions-body{
+    font-size: 1.3rem;
+}
+
+.directions-body ol{
+    list-style-type: decimal;
+    column-count: 1;
+    margin-left: 25px; 
+}
+
+.directions-body li:nth-child(even){
+    background-color: rgb(196, 196, 196);
+}
+
+.directions-body li{
+    margin: 3px 0;
+}
+
+
+/*Duplicated for simplicity*/
+.main-recipe-container{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        'mainrecipeheader'
+        'ingredients'
+        'directions'
+        'comments';
+}
+
+/* Comment section */
+.comment-container{
+    text-align: center;
+    grid-area: comments;
+    max-height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.comment-container h3{
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.comment-container > p{
+    padding-top: 5px;
+    font-size: 1.2rem;
+}
+
+.comment-container > p i{
+    color: green;
+}
+
+.comment-container textarea{
+    width: 80%;
+    height: 100px;
+    resize: none;
+    font-size: 1rem;
+}
+
+.comment-container button{
+    width:100px;
+    height: 30px;
+    background: var(--dark);
+    color: var(--light);
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
+    border: none;
+}
+
+.comment-container button:hover{
+    background-color: green;
+}
+
+.comment-box {
+    margin: 10px 10px;
+    background-color: var(--light);
+    text-align: left;
+    padding: 10px;
+    font-size: 1rem;
+    position: relative;
+}
+
+.comment-box h4, .comment-box h5{
+    font-size: 1.1rem;
+}
+
+.comment-box p{
+    padding-top: 10px;
+    font-size: 1rem;
+}
+
+.delete-form{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.delete-form button{
+    width: 50px;
+    height: 20px;
+    color:var(--dark);
+    background-color: var(--light);
+    box-shadow: none;
+}
+
+.delete-form button:hover{
+    background-color: red;
+    color: var(--light);
+
+}
+
+
+
+
+/*For tablets*/
+@media only screen and (min-width: 600px){
+    .main-container{
+        grid-template-areas: 
+            'mainrecipe'
+            'otherrecipe';
+    }
+
+    .main-recipe-container{
+        grid-template-areas:
+            'mainrecipeheader'
+            'ingredients'
+            'directions'
+            'comments';
+    }
+
+    .ingredients-body ul{
+        column-count: 2;
+    }
+
+    .directions-body ul{
+        column-count: 1;
+    }
+}
+
+/*For desktop*/
+@media only screen and (min-width: 768px){
+    .main-container{
+        grid-template-areas: 
+            'mainrecipe mainrecipe mainrecipe otherrecipe'
+            'mainrecipe mainrecipe mainrecipe otherrecipe';
+    }
+
+    .main-recipe-container{
+        grid-template-areas: 
+            'mainrecipeheader mainrecipeheader mainrecipeheader'
+            'ingredients directions directions'
+            'comments comments comments';
+    }
+
+    .ingredients-body ul{
+        column-count: 2;
+    }
+
+    .directions-body ul{
+        column-count: 2;
+    }
+}
+
+
+
+
+
+
+

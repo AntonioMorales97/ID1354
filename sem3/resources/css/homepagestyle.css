@@ -1,0 +1,105 @@
+/* Logo Container */
+.logo-container{
+    background-image: url("../images/logo.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.logo-container h1{
+    margin-top: 1rem;
+    margin-right: 2rem;
+    color: var(--light);
+    font-size: 4rem;
+    font-weight: 1000;
+    text-align: right;
+    text-shadow: 4px 4px 16px var(--dark);
+}
+
+/* Top Container */
+.showcase{
+    grid-area: showcase;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.showcase h2{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.sidecase{
+    grid-area: sidecase;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.sidecase h2{
+    font-size: 2rem;
+}
+
+.sidecase img{
+    height: 300px;
+}
+
+.top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        'showcase'
+        'sidecase';
+}
+
+/*Bottom Header*/
+.bottom-header{
+    width: 100%;
+    font-size: 2rem;
+    font-style: italic;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+/* Bottom Container */
+.bottom-container .boxes{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,
+    minmax(200px, 1fr));
+}
+
+.bottom-container .boxes img{
+    width: 90%;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+    border-radius: 2rem;
+}
+
+.bottom-container .boxes img:hover{
+    box-shadow: var(--shadow);
+    width: 100%;
+}
+
+/* For tablets */
+@media only screen and (min-width: 600px){
+    .top-container{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: 
+            'showcase showcase'
+            'sidecase sidecase';
+    }
+}
+
+/*For desktop*/
+@media only screen and (min-width: 768px){
+    .top-container {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: 
+            'showcase showcase sidecase'
+            'showcase showcase sidecase';
+    }
+}
