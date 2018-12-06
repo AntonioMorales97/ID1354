@@ -26,18 +26,9 @@ class Controller{
      * @param $loginName.
      * @param $loginPass.
      */
-    
-    public function loginUser($loginName, $loginPass){
+    public function loginUserProcess($loginName, $loginPass){
         $userHandler = new UserHandler();
-        $userHandler->login(new LoginDTO($loginName, $loginPass));
-    }
-
-    /**
-     * Send request to user handler to logout this user.
-     */
-    public function logoutUser(){
-        $userHandler = new UserHandler();
-        $userHandler->logout();
+        $userHandler->loginVerify(new LoginDTO($loginName, $loginPass));
     }
 
     /**

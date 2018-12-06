@@ -16,8 +16,9 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         $password = htmlentities($_POST['password'], ENT_QUOTES);
         try{
             $controller = SessionManager::getController();
-            $controller->loginUser($username, $password);
-            
+            $controller->loginUserProcess($username, $password);
+            session_regenerate_id();
+            $_SESSION['username'] = $username;
             echo 
                 '<div class="success">
                     <p>Login success!</p>

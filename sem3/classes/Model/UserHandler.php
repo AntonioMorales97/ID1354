@@ -29,11 +29,11 @@ class UserHandler{
     }
 
     /**
-     * This method performs login functionality.
+     * This method performs the process for login, that is: username verify and a password verify to that username.
      * @param LoginDTO $userLoginData.
      * @throws CustomException if username is not found or password does not match the given username.
      */
-    public function login(LoginDTO $userLoginData){
+    public function loginVerify(LoginDTO $userLoginData){
         $userDAO = new UserDAO();
         $username = $userLoginData->getUsername();
         $password = $userLoginData->getPassword();
@@ -41,22 +41,13 @@ class UserHandler{
         if($foundUsername == $username){
             $hashedPassword = $userDAO->getPassword($username);
             if(password_verify($password, $hashedPassword)){
-                session_regenerate_id();                                //more secure
-                $_SESSION['username'] = $userLoginData->getUsername();
+                return; //successfull return.
             }else
                 throw new CustomException("Password do not match with username you entered!");
         }else{
             throw new CustomException("That username does not exist!");
         }
         
-    }
-    /**
-     * This method logs out the logged in user
-     */
-    public function logout(){
-        session_regenerate_id();
-        session_unset();
-        session_destroy();
     }
 
     /**
