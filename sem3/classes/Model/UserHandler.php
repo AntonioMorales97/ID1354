@@ -1,5 +1,4 @@
 <?php
-
 namespace Model;
 
 use DTO\LoginDTO;
@@ -8,7 +7,7 @@ use Exceptions\CustomException;
 use Integration\UserDAO;
 
 /**
- * This class handles the registering, login and logout of users.
+ * This class handles login verify and registration of users and also uses the UserDAO.php.
  */
 class UserHandler{
     
