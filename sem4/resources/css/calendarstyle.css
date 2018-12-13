@@ -1,0 +1,135 @@
+.calendar-header{
+    background-image: url(../images/food.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+
+.calendar-header i{
+    padding-top: 1rem;
+    color: var(--light);
+    text-shadow: 4px 4px 16px var(--dark);
+}
+
+.calendar-header h2{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--light);
+    font-weight: 1000;
+    text-shadow: 4px 4px 16px var(--dark);
+}
+
+.calendar-header h3{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+    color: var(--light);
+    font-weight: 1000;
+    text-shadow: 4px 4px 16px var(--dark);
+}
+
+.calendar{
+    width: 100%;
+}
+
+.calendar .week{
+    -ms-box-orient: horizontal;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.calendar .week .day {
+    width: 100%;
+    height: 4em;
+    -webkit-flex: 0 1 auto;
+    -moz-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding-top: 2px;
+    border: 1px solid black;
+    text-align: center;
+    background: var(--primary);
+    overflow: hidden;
+}
+  
+.calendar .week .day p {
+    font-size: 20%; /*prob change to percent*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic; 
+    font-weight: 800;
+}
+
+.calendar .week .weekend p{
+    color: white;
+}
+  
+.calendar .week .weekend {
+    background: red; 
+}
+  
+  
+.calendar .week .next-month {
+    opacity: 0.4; 
+}
+
+.calendar .week .day:hover{
+    transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -webkit-transition: width 1s ease-in-out;
+    width: 110%;
+    background-color: rgb(253, 100, 100);
+}
+
+.calendar .week .day a .img-responsive {
+    height: 3em;
+}
+
+.calendar .week .day a img:hover {
+    opacity: 0.9; 
+}
+
+/*For Tablets*/
+@media only screen and (min-width: 600px){
+
+    .calendar .week .day p{
+        font-size: 0.6rem;
+    }
+
+    .calendar .week .day{
+        height: 5em;
+    }
+
+    .calendar .week .day a .img-responsive {
+        height: 4em;
+    }
+}
+
+/*For desktop*/
+@media only screen and (min-width: 768px){
+
+    .calendar .week .day p{
+        font-size: 1em;
+    }
+
+    .calendar .week .day{
+        height: 10em;
+    }
+
+    .calendar .week .day a .img-responsive {
+        height: 10em;
+    }
+}
+
