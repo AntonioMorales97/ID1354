@@ -64,12 +64,9 @@
 
             <div class="comment-container">
                 <h3>Comments about the recipe</h3>
-                    <!-- ko if: loggedIn-->
-                    
-                                
-                                <textarea data-bind="textInput: commentMessage" placeholder="Enter a comment for this recipe!"></textarea><br/>
-                                <button data-bind="click: postComment">Comment</button>
-                            
+                    <!-- ko if: loggedIn--> 
+                        <textarea data-bind="textInput: commentMessage" placeholder="Enter a comment for this recipe!"></textarea><br/>
+                        <button data-bind="click: postComment">Comment</button>            
                     <!-- /ko -->
                     <!-- ko ifnot: loggedIn-->
                         <p>Log in to leave a comment!<i class="fas fa-smile-beam"></i></p>
